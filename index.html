@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Matrix Operation System</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <div class="nav-logo">
+            MATRIX OPERATION SYSTEM
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/about.html">
+                About
+            </a>
+
+            <a href="/team.html">
+                Team
+            </a>
+
+            <a href="/formulas.html">
+                Formulas
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main class="main-container">
+
+        <h1>
+            Matrix Operation System
+        </h1>
+
+        <p class="subtitle">
+            Perform matrix calculations using C++ backend
+        </p>
+
+
+        <!-- MATRIX SECTION -->
+
+        <section class="matrix-section">
+
+
+            <!-- MATRIX A -->
+
+            <div class="card">
+
+                <h2>
+                    Matrix A
+                </h2>
+
+                <div class="dimension-row">
+
+                    <label>
+                        Rows
+                        <select id="rowsA"></select>
+                    </label>
+
+                    <label>
+                        Columns
+                        <select id="colsA"></select>
+                    </label>
+
+                </div>
+
+
+                <div
+                    id="matrixA"
+                    class="matrix-box">
+                </div>
+
+
+                <div class="small-buttons">
+
+                    <button
+                        onclick="focusMatrix('A')">
+                        Input Matrix A
+                    </button>
+
+                    <button
+                        onclick="clearMatrix('A')">
+                        Clear A
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- MATRIX B -->
+
+            <div class="card">
+
+                <h2>
+                    Matrix B
+                </h2>
+
+                <div class="dimension-row">
+
+                    <label>
+                        Rows
+                        <select id="rowsB"></select>
+                    </label>
+
+                    <label>
+                        Columns
+                        <select id="colsB"></select>
+                    </label>
+
+                </div>
+
+
+                <div
+                    id="matrixB"
+                    class="matrix-box">
+                </div>
+
+
+                <div class="small-buttons">
+
+                    <button
+                        onclick="focusMatrix('B')">
+                        Input Matrix B
+                    </button>
+
+                    <button
+                        onclick="clearMatrix('B')">
+                        Clear B
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OPERATIONS -->
+
+        <section class="card operations-card">
+
+            <h2>
+                Select Operation
+            </h2>
+
+            <div class="operation-grid">
+
+                <button
+                    class="operation selected"
+                    data-op="add">
+
+                    Addition
+
+                </button>
+
+
+                <button
+                    class="operation"
+                    data-op="sub">
+
+                    Subtraction
+
+                </button>
+
+
+                <button
+                    class="operation"
+                    data-op="mul">
+
+                    Multiplication
+
+                </button>
+
+
+                <button
+                    class="operation"
+                    data-op="transA">
+
+                    Transpose A
+
+                </button>
+
+
+                <button
+                    class="operation"
+                    data-op="transB">
+
+                    Transpose B
+
+                </button>
+
+
+                <button
+                    class="operation"
+                    data-op="detA">
+
+                    Determinant A
+
+                </button>
+
+
+                <button
+                    class="operation"
+                    data-op="detB">
+
+                    Determinant B
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="operationText"
+                class="operation-text">
+
+                Operation:
+                <b>A + B</b>
+
+            </div>
+
+
+            <button
+                class="calculate-button"
+                onclick="calculate()">
+
+                CALCULATE
+
+            </button>
+
+
+            <button
+                class="reset-button"
+                onclick="resetSystem()">
+
+                RESET SYSTEM
+
+            </button>
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        <section class="card result-card">
+
+            <h2>
+                Result
+            </h2>
+
+            <div
+                id="resultGrid"
+                class="result-grid">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Matrix Operation System |
+            C++ Backend |
+            Team 07
+        </p>
+
+    </footer>
+
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
